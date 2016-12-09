@@ -130,7 +130,8 @@ class InfixToPostFix {
 	}
 	
 	public void gotParenthesis(char ch) {
-		//If we got ')' then pop all the operator upto '('
+		//If we got ')' then pop all the operator upto '('. ann add all other operator other than "("
+		//add to postfix String.
 		while(!oprStack.empty()) {
 			char opr = oprStack.pop();
 			if(opr == '(') {
